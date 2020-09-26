@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Montserrat; /* Гарнитура шрифта */
+    src: url(../fonts/Montserrat-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold; /* Гарнитура шрифта */
+    src: url(../fonts/Montserrat-SemiBold.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+    background-color: black; /* Цвет фона веб-страницы */
+    margin-left: 120pt;
+}
+
+h2 {
+  color: white;
+  font-size: 16pt;
+  font-family: Montserrat;
+  margin: 0pt
+}
+
+p {
+  color: white;
+  font-family: Montserrat;
+  margin: 0pt;
+}
+
+h1.name {
+  font-size: 72pt;
+  font-weight: normal;
+  margin: 0pt;
+  margin-bottom: 157pt;
+  color: #C1C1C1;
+  font-family: Montserrat;
+}
+
+h2.sectionTitle {
+  font-size: 20pt;
+  font-family: Montserrat-SemiBold
+}
+
+h2.blockTitle {
+  /* display: inline-block; */
+  float: left;
+}
+
+img.avatar {
+  margin-top: 55pt;
+  margin-bottom: 33pt;
+  height: 310pt;
+  width: 308pt
+}
+
+p.sectionDescription {
+  /* display:inline-block; */
+  font-size: 16pt;
+  margin-top: 17pt;
+  /* margin-bottom: 67pt; */
+  color: #A7A7A7
+}
+
+p.link {
+  margin-top: 7pt;
+  font-size: 13pt;
+  color: #656565
+}
+
+.about {
+  height: 289pt;
+  width: 895pt;
+  /* background-color: gray; */
+  font-family: Montserrat;
+}
+
+.tech {
+  height: 82pt;
+  width: 994pt;
+  /* background-color: gray; */
+  font-family: Montserrat;
+}
+
+.aboutBlock {
+  margin-left: 387pt;
+  /* float: left; */
+}
+.programmingBlock {
+  margin-left: 332pt;
+  margin-right: 239pt;
+  float: left;
+}
+
+.technologiesBlock {
+  margin-left: 328pt;
+}
+
+.projects {
+  width: 1006pt;
+  height: 266pt;
+  /* background-color: gray */
+}
+
+.projectTitleWithLanguage {
+  float: left;
+}
+
+.projectsWrapper {
+  width: 1006pt;
+  height: 105pt;
+}
