@@ -11,8 +11,7 @@ Array.prototype.min = function() {
 }
 
 Array.prototype.median = function() {
-    const mid = Math.ceil(this.length / 2);
-    console.log(this)
+    const mid = Math.ceil(this.length / 2)
     return this.length % 2 === 0 ? (this[mid] + this[mid - 1]) / 2 : this[mid - 1]
 }
 
@@ -34,13 +33,11 @@ function quickSort(arr) {
 
 let arr = generateArray(10_000)
 
-// console.log(arr)
-//
+console.log(arr)
+
 console.log(quickSort(arr))
-//
-// console.log(arrayParams(arr))
 
-Array.prototype.median.apply(this)
+console.log(arrayParams(arr))
 
-console.log(this)
+Array.prototype.median()
 
