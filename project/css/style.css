@@ -1,0 +1,230 @@
+@font-face {
+    font-family: Montserrat; /* Гарнитура шрифта */
+    src: url(../fonts/Montserrat-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold; /* Гарнитура шрифта */
+    src: url(../fonts/Montserrat-SemiBold.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+  background-color: black;
+}
+
+h1, p, li {
+  font-family: Montserrat;
+  color: white;
+  margin: 0;
+  padding: 5;
+  /* display: block; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 80pt;
+  font-family: Montserrat;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navmenu {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat;
+  align-items: center;
+}
+
+.navitem {
+  margin-left: 20pt;
+  margin-right: 20pt;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.active {
+  color: blue;
+}
+
+.contact {
+  height: 30pt;
+  width: 110pt;
+  margin-right: 80pt;
+  text-transform: uppercase;
+  color: white;
+
+  background-color: black;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+
+  transition-duration: 0.3s;
+}
+
+.contact:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.welcome {
+  width: 100%;
+  height: 580pt;
+  background-image: url(../img/rocket.jpg);
+  background-position: 65% 30%;
+  /* opacity: 0.3; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex: 0 1 200px; */
+  margin-top: 80pt;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* text-align: center; */
+  /* background-position: center; */
+  /* background-position: bottom 300px; */
+}
+
+.goods-wrapper {
+  display: flex;
+  width: 100%;
+  height: 1000pt;
+  /* opacity: 0.3; */
+  flex-wrap: wrap;
+}
+
+.good {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 500pt;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.starship1 {
+  background-image: url(../img/rocket1.jpg);
+  background-position: 65% 5%;
+  background-size: 100%;
+}
+.starship2 {
+  background-image: url(../img/rocket2.jpg);
+  background-position: 65% 45%;
+  background-size: 100%;
+}
+.starship3 {
+  background-image: url(../img/rocket3.jpg);
+  background-position: 50% 45%;
+  background-size: 150%;
+}
+.starship4 {
+  background-image: url(../img/rocket4.jpg);
+  background-position: 50% 45%;
+  background-size: 100%;
+}
+
+.itemwrapper {
+  display: flex;
+  width: 100%;
+}
+
+.itemphoto {
+  width: 400pt;
+  height: 400pt;
+}
+
+.contactblock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80pt;
+  width: 100%;
+  height: 400pt;
+}
+
+#up {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: white; /* Set a background color */
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#up:hover {
+  background-color: gray; /* Add a dark-grey background on hover */
+}
+
+
+/* The Modal (background) */
+.modal {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ padding-top: 100px; /* Location of the box */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+ margin: auto;
+ display: block;
+ width: 80%;
+ max-width: 700px;
+}
+
+/* Modal Content/Box */
+.modal-content-contact {
+  background-color: #C0C0C0;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+.close {
+ position: absolute;
+ top: 15px;
+ right: 35px;
+ color: #f1f1f1;
+ font-size: 40px;
+ font-weight: bold;
+ transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+ color: #bbb;
+ text-decoration: none;
+ cursor: pointer;
+}

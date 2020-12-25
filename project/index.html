@@ -1,0 +1,100 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Обертка для навбара -->
+  <div class = "navbar">
+    <!-- Логотип -->
+    <img style = "height: 20pt; margin-left: 80pt;" src = "img/logo.png"/>
+    <!-- Ссылки на разделы сайта -->
+    <div class = "navmenu">
+      <a class = "active navitem" href="#">Home</a>
+      <a class = "navitem" href="#">About</a>
+      <a class = "navitem" href="./contact.html">Contact</a>
+    </div>
+    <!-- Блок с контаками -->
+    <button class = "contact" id="myBtn">Contact us</button>
+  </div>
+
+  <!-- Блок с приветсвенным сообщением -->
+  <div class = "welcome">
+    <h1>Space shuttles</h1>
+    <p>Achieve your dream. Be a star.<p>
+  </div>
+
+   <button onclick="topFunction()" id="up" title="Go to top">Up!</button>
+
+  <!-- Товары -->
+  <div class = "goods-wrapper">
+    <div class = "good starship1">
+      <h1>Ches starship - M7 Series</h1>
+    </div>
+
+    <div class = "good starship2">
+      <a href="vostok.html"><h1>Vostok rocket</h1></a>
+    </div>
+
+    <div class = "good starship3">
+      <h1>USA Moon landing module</h1>
+    </div>
+
+    <div class = "good starship4">
+      <h1>Space shuttle with launching module</h1>
+    </div>
+
+  </div>
+
+  <h1>What people say about us</h1>
+
+  <div class = "goods-wrapper">
+    <div class="good">
+      <h1>Very good</h1>
+    </div>
+    <div class="good">
+      <h1>So nice</h1>
+    </div>
+    <div class="good">
+      <h1>Oh my...</h1>
+    </div>
+    <div class="good">
+      <h1>Damn boi</h1>
+    </div>
+  </div>
+
+  <div class = "welcome" style="background-image: url(img/rocket2.jpg); margin-top: 0pt;">
+    <h1>Special offer</h1>
+    <p>Get VOSTOK rocket for free!<p>
+  </div>
+
+  <h1>Come and visit us at Nevskiy pr., 82</h1>
+
+  <div class = "welcome" style="background-image: url(img/map.jpg); margin-top: 0pt;"></div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-contact">
+      <span class="close">&times;</span>
+      <form>
+       <label for="fname">First name:</label><br>
+       <input type="text" id="fname" name="fname"><br>
+
+       <label for="lname">Last name:</label><br>
+       <input type="text" id="lname" name="lname"><br>
+
+       <label for="say">Something to say:</label><br>
+       <input type="text" id="say" name="say"><br>
+       <button type="button" name="submit">Submit</button>
+     </form>
+    </div>
+
+  </div>
+
+
+</body>
+
+<script src="./js/contact.js"></script>
+<script src="./js/up.js"></script>

@@ -1,0 +1,60 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+  <!-- Обертка для навбара -->
+  <div class = "navbar">
+    <!-- Логотип -->
+    <img style = "height: 20pt; margin-left: 80pt;" src = "img/logo.png"/>
+    <!-- Ссылки на разделы сайта -->
+    <div class = "navmenu">
+      <a class = "navitem" href="./index.html">Home</a>
+      <a class = "navitem" href="#">About</a>
+      <a class = "navitem" href="./contact.html">Contact</a>
+    </div>
+    <!-- Блок с контаками -->
+    <button class = "contact" id="myBtn">Contact us</button>
+  </div>
+
+  <div class="itemwrapper" style="margin-top:80pt;">
+    <img class="itemphoto" src="./img/rocket2.jpg"/>
+
+    <ul>
+      <li>Amazing perfomance</li>
+      <li>Incredible speed</li>
+      <li>$100 000 000</li>
+      <p>Vostok (Russian: Восток, translated as "East") was a family of rockets derived <br>from the Soviet R-7 Semyorka ICBM and was designed for the human spaceflight programme. <br>This family of rockets launched the first artificial satellite (Sputnik 1)<br> and the first crewed spacecraft (Vostok) in human history. <br>It was a subset of the R-7 family of rockets. </p>
+      <br>
+      <button class="contact" style="background-color:gray;">Buy</button>
+    </ul>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-contact">
+      <span class="close">&times;</span>
+      <form>
+       <label for="fname">First name:</label><br>
+       <input type="text" id="fname" name="fname"><br>
+
+       <label for="lname">Last name:</label><br>
+       <input type="text" id="lname" name="lname"><br>
+
+       <label for="say">Something to say:</label><br>
+       <input type="text" id="say" name="say"><br>
+       <button type="button" name="submit">Submit</button>
+     </form>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="./js/contact.js"></script>

@@ -1,0 +1,51 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Обертка для навбара -->
+  <div class = "navbar">
+    <!-- Логотип -->
+    <img style = "height: 20pt; margin-left: 80pt;" src = "img/logo.png"/>
+    <!-- Ссылки на разделы сайта -->
+    <div class = "navmenu">
+      <a class = "navitem" href="./index.html">Home</a>
+      <a class = "navitem" href="#">About</a>
+      <a class = "active navitem" href="#">Contact</a>
+    </div>
+    <!-- Блок с контаками -->
+    <button class = "contact" id="myBtn">Contact us</button>
+  </div>
+
+  <button onclick="topFunction()" id="up" title="Go to top">Up!</button>
+
+  <div class="contactblock">
+    <p>Russia,<br>Saint-petersburg,<br>Nevskiy pr. 83</p>
+  </div>
+  <div class = "welcome" style="background-image: url(img/map.jpg); margin-top: 0pt;"></div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-contact">
+      <span class="close">&times;</span>
+      <form>
+       <label for="fname">First name:</label><br>
+       <input type="text" id="fname" name="fname"><br>
+
+       <label for="lname">Last name:</label><br>
+       <input type="text" id="lname" name="lname"><br>
+
+       <label for="say">Something to say:</label><br>
+       <input type="text" id="say" name="say"><br>
+       <button type="button" name="submit">Submit</button>
+     </form>
+    </div>
+
+  </div>
+</body>
+
+<script src="./js/contact.js"></script>
+<script src="./js/up.js"></script>
