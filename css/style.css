@@ -155,6 +155,10 @@ h3{
   float: right;
 }
 
+.reloadText {
+  display: none;
+}
+
 @media (min-width: 992px){
   .weatherBlock {
     width: 45%;
@@ -164,6 +168,13 @@ h3{
   }
   .longBtn {
     width: 160px;
+  }
+  .reloadIcon {
+    display: none
+  }
+  .reloadText {
+    display: inline-block;
+    font-size: 0.8em;
   }
   .sectionTitleWrapper {
     width: 95%;
