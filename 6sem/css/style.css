@@ -4,6 +4,7 @@ li {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 a {
@@ -12,17 +13,15 @@ a {
 
 h1, h2, h3{
     margin: 0;
-    font-size: 2em;
-}
-
-h1, h2{
-    display: inline-block;
-    width: 45%;
     font-size: 1.5em;
 }
 
+h1 {
+  display: inline;
+}
+
 h3{
-    display: inline-block;
+    display: inline;
     font-size: 1em;
 }
 
@@ -41,6 +40,8 @@ h3{
 .largeTitle {
   font-size: 40px;
   font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .title {
@@ -55,7 +56,7 @@ h3{
 .regularTemperature{
     font-size: 1em;
     margin-left: 5%;
-    display: inline-block;
+    margin-right: 5%;
 }
 
 .largeTemperature {
@@ -74,6 +75,11 @@ h3{
   /* background-color: gray; */
 }
 
+.headerWeatherDataWrapper {
+  display: flex;
+  align-items: center;
+}
+
 .sectionTitleWrapper {
   width: 90%;
   margin: auto;
@@ -86,24 +92,32 @@ h3{
   width: 90%;
   height: 300px;
   /* background-color: red; */
-  margin-bottom: 10px;
-  margin-top: 10px;
+  /* margin-bottom: 10px; */
+  margin-top: 45px;
 }
 
 .weatherHereSmallDataBlock {
   width: 90%;
 }
 
-.search{
-    float: left;
-    /* max-width: 50%; */
-    text-align: right;
-    display: inline-block;
+.search { }
+
+.addCityForm {
+  display: flex;
 }
 
 .search-type{
     background-color: whitesmoke;
     border: slategray 1px solid;
+    width: 80%;
+}
+
+.loadingBigBlock {
+  display: flex;
+  align-items: center;
+  height: 345px;
+  justify-content: center;
+  width: 100%
 }
 
 .weatherDataBlock {
@@ -125,7 +139,6 @@ h3{
 .weatherIcon {
   height: 30px;
   width: 30px;
-  display: inline-block;
   /* background-color: blue; */
   /* background-image: url(../img/cloud.png); */
 }
@@ -142,12 +155,15 @@ h3{
 
 .btn {
   background-color: gray;
-  display: inline-block;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   border: none;
   text-align: center;
+}
+
+.closeBtn {
+  margin-left: auto;
 }
 
 .longBtn {
@@ -182,8 +198,12 @@ h3{
 
 }
 
-@media (min-width: 397px) {
+@media (min-width: 420px) {
   .search {
     float: right;
+  }
+  .search-type {
+    width: 200px;
+    margin-right: 10px;
   }
 }

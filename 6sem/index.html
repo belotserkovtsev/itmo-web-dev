@@ -11,19 +11,19 @@
     <main>
       <div class="sectionTitleWrapper">
         <h1>Погода здесь</h1>
-        <button type="button" name="button" class="reload btn longBtn regular">
+        <button onclick="reloadWeather()" type="button" name="button" class="reload btn longBtn regular">
           <span class="reloadIcon">&#x21bb;</span>
           <span class="reloadText">Обновить геолокацию</span>
 
         </button>
       </div>
 
-      <div class="weatherBlocksWrapper">
+      <div id="weatherHereBlock" class="weatherBlocksWrapper">
 
         <div class="weatherHereSmallDataBlock">
-          <p class="largeTitle">Saint-Petersburg</p>
+          <h2 id="weatherHereCity" class="largeTitle">Saint-Petersburg</h2>
           <img src="./img/cloud.png" class="weatherIcon hugeIcon" alt="icon">
-          <p class="largeTemperature">15°C</p>
+          <p id="weatherHereTemp" class="largeTemperature"></p>
 
         </div>
 
@@ -31,118 +31,57 @@
           <ul>
             <li class="weatherDataBlock">
               <p>Ветер</p>
-              <p>Moderate breeze</p>
+              <p id="weatherHereWind"></p>
             </li>
 
             <li class="weatherDataBlock">
-              <p>Облачность</p>
-              <p>Moderate breeze</p>
+              <p>Видимость</p>
+              <p id="weatherHereVisibility"></p>
             </li>
 
             <li class="weatherDataBlock">
               <p>Давление</p>
-              <p>Moderate breeze</p>
+              <p id="weatherHerePressure"></p>
             </li>
 
             <li class="weatherDataBlock">
               <p>Влажность</p>
-              <p>Moderate breeze</p>
+              <p id="weatherHereHumidity"></p>
             </li>
 
             <li class="weatherDataBlock">
               <p>Координаты</p>
-              <p>Moderate breeze</p>
+              <p id="weatherHereCoord"></p>
             </li>
           </ul>
         </div>
+      </div>
+
+      <div id="loadingBigBlock" class="loadingBigBlock">
+        <img id="loadingHere" src="./img/loader.gif" alt="">
+        <p id="errorHere" class="largeTitle">Error 404</p>
       </div>
 
       <div class="sectionTitleWrapper">
-        <h2>Избранное</h2>
+        <h2 class="inline-block">Избранное</h2>
         <div class="search">
-          <input class="search-type" type="search" placeholder="Добавить новый город">
-          <button class="btn">+</button>
+
+
+          <form class="addCityForm" action="#" onsubmit="storeCity(); return false">
+            <input id="inputCity" class="search-type" type="search" placeholder="Добавить новый город">
+            <!-- <button class="btn closeBtn">+</button> -->
+            <input class="btn closeBtn" type="submit" value="+">
+          </form>
         </div>
       </div>
 
+      <div id="weatherDataWrapper" class="weatherBlocksWrapper"></div>
 
-      <div class="weatherBlocksWrapper">
-        <div class="weatherBlock">
-
-          <h3 class="inline-block">Moscow</h3>
-          <p class="regularTemperature">15°C</p>
-          <img src="./img/cloud.png" class="weatherIcon">
-          <button class="btn float-right" type="button" name="button">X</button>
-
-
-          <ul>
-            <li class="weatherDataBlock">
-              <p>Ветер</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Облачность</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Давление</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Влажность</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Координаты</p>
-              <p>Moderate breeze</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="weatherBlock">
-
-          <h3 class="inline-block">Moscow</h3>
-          <p class="regularTemperature">15°C</p>
-          <img src="./img/cloud.png" class="weatherIcon">
-          <button class="btn float-right" type="button" name="button">X</button>
-
-
-          <ul>
-            <li class="weatherDataBlock">
-              <p>Ветер</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Облачность</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Давление</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Влажность</p>
-              <p>Moderate breeze</p>
-            </li>
-
-            <li class="weatherDataBlock">
-              <p>Координаты</p>
-              <p>Moderate breeze</p>
-            </li>
-          </ul>
-        </div>
-
-
-      </div>
     </main>
 
 
   </body>
+
+  <script src="./js/GetCurrentWeather.js"></script>
+  <script src="./js/GetFavouriteWeather.js"></script>
 </html>
