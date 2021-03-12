@@ -10,7 +10,7 @@ for(let i = 0; i < localStorage.length; ++i) {
 function requestFor(city) {
   let favouriteRequest = new XMLHttpRequest()
   favouriteRequest.open('GET', `https://community-open-weather-map.p.rapidapi.com/weather?q=${city}&units=metric`, true)
-  favouriteRequest.setRequestHeader('x-rapidapi-key', '6612892f6emsh30a0f24ef412cd4p124235jsnf129c5108087')
+  favouriteRequest.setRequestHeader('x-rapidapi-key', 'd5d8135a54mshd320d2f046aa089p1025c7jsnbd7c07d68604')
 
   favouriteRequest.onreadystatechange = function() {
         if(favouriteRequest.readyState === XMLHttpRequest.DONE && favouriteRequest.status === 200) {

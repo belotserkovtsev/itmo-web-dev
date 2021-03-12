@@ -36,7 +36,7 @@ function getDataForCoords(position) {
                 `?lat=${position.coords.latitude}` +
                 `&lon=${position.coords.longitude}&units=metric`,
                 true)
-  request.setRequestHeader('x-rapidapi-key', '6612892f6emsh30a0f24ef412cd4p124235jsnf129c5108087')
+  request.setRequestHeader('x-rapidapi-key', 'd5d8135a54mshd320d2f046aa089p1025c7jsnbd7c07d68604')
   request.send()
   latestPosition = position
 }
@@ -54,7 +54,7 @@ function setData(data) {
 
 // Default request
 request.open('GET', 'https://community-open-weather-map.p.rapidapi.com/weather?q=Moscow&units=metric', true)
-request.setRequestHeader('x-rapidapi-key', '6612892f6emsh30a0f24ef412cd4p124235jsnf129c5108087')
+request.setRequestHeader('x-rapidapi-key', 'd5d8135a54mshd320d2f046aa089p1025c7jsnbd7c07d68604')
 
 request.onload = function () {
   let data = JSON.parse(this.response)
