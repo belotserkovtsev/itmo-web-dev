@@ -67,7 +67,7 @@ function requestFor(city) {
 function storeCity() {
   let city = document.getElementById("inputCity")
   requestFor(city.value)
-  console.log(city.value);
+  // console.log(city.value);
 }
 
 function removeBlock(city) {
