@@ -11,7 +11,7 @@
     <main>
       <div class="sectionTitleWrapper">
         <h1>Погода здесь</h1>
-        <button onclick="reloadWeather()" type="button" name="button" class="reload btn longBtn regular">
+        <button id="reloadCurrentCity" type="button" name="button" class="reload btn longBtn regular">
           <span class="reloadIcon">&#x21bb;</span>
           <span class="reloadText">Обновить геолокацию</span>
 
@@ -67,15 +67,102 @@
         <div class="search">
 
 
-          <form class="addCityForm" action="#" onsubmit="storeCity(); return false">
+          <form id="addCityForm" class="addCityForm" action="#">
             <input id="inputCity" class="search-type" type="search" placeholder="Добавить новый город">
             <!-- <button class="btn closeBtn">+</button> -->
-            <input class="btn closeBtn" type="submit" value="+">
+            <input id="submitCity" class="btn closeBtn" type="submit" value="+">
           </form>
         </div>
       </div>
 
-      <div id="weatherDataWrapper" class="weatherBlocksWrapper"></div>
+      <div id="weatherDataWrapper" class="weatherBlocksWrapper">
+
+      </div>
+
+
+      <template id="weatherBlockTemplate">
+        <div class="weatherBlock">
+          <div class="headerWeatherDataWrapper">
+            <h3>Moscow</h3>
+            <p class="regularTemperature">${data.main.temp}°C</p>
+            <img src="./img/cloud.png" class="weatherIcon">
+            <button class="btn closeBtn" type="button" id="removeCity" name="button">X</button>
+          </div>
+
+          <ul>
+            <li class="weatherDataBlock">
+              <p>Ветер</p>
+              <p>${data.wind.speed} km/h</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Видимость</p>
+              <p>${data.visibility} m</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Давление</p>
+              <p>${data.main.pressure} bar</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Влажность</p>
+              <p>${data.main.humidity} %</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Координаты</p>
+              <p>${data.coord.lon + ', ' + data.coord.lat}</p>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="weatherBlockLoadingTemplate">
+        <div id="weatherBlockLoading" class="weatherBlock">
+          <div id="loadingCityBigBlock" class="loadingBigBlock">
+            <img id="loadingCity" src="./img/loader.gif" alt="">
+            <p id="errorCity" class="largeTitle" style="display: none;">Error 404</p>
+          </div>
+        </div>
+
+        <div id="weatherBlockLoaded" class="weatherBlock" style="display: none;">
+          <div class="headerWeatherDataWrapper">
+            <h3></h3>
+            <p class="regularTemperature">°C</p>
+            <img src="./img/cloud.png" class="weatherIcon">
+            <button class="btn closeBtn" type="button" name="button">X</button>
+          </div>
+
+          <ul>
+            <li class="weatherDataBlock">
+              <p>Ветер</p>
+              <p> km/h</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Видимость</p>
+              <p> m</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Давление</p>
+              <p> bar</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Влажность</p>
+              <p> %</p>
+            </li>
+
+            <li class="weatherDataBlock">
+              <p>Координаты</p>
+              <p></p>
+            </li>
+          </ul>
+        </div>
+      </template>
+
 
     </main>
 
