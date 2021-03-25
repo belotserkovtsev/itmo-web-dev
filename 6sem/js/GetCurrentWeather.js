@@ -23,12 +23,14 @@ geolocation.getCurrentPosition(position => {
   getDataForCoords(position)
 })
 
-//Methods
-function reloadWeather() {
+let reloadButton = document.querySelector('#reloadCurrentCity')
+reloadButton.addEventListener("click", () => {
   if (latestPosition !== null) {
     getDataForCoords(latestPosition)
+  } else {
+    defaultRequest()
   }
-}
+})
 
 function getDataForCoords(position) {
   request.open('GET',
@@ -53,28 +55,32 @@ function setData(data) {
 }
 
 // Default request
-request.open('GET', 'https://community-open-weather-map.p.rapidapi.com/weather?q=Moscow&units=metric', true)
-request.setRequestHeader('x-rapidapi-key', 'd5d8135a54mshd320d2f046aa089p1025c7jsnbd7c07d68604')
+function defaultRequest() {
+  request.open('GET', 'https://community-open-weather-map.p.rapidapi.com/weather?q=Moscow&units=metric', true)
+  request.setRequestHeader('x-rapidapi-key', 'd5d8135a54mshd320d2f046aa089p1025c7jsnbd7c07d68604')
 
-request.onload = function () {
-  let data = JSON.parse(this.response)
+  request.onload = function () {
+    let data = JSON.parse(this.response)
 
-  if (request.status == 200) {
-    setData(data)
-    loadingHereBigBlock.style = 'display: none;'
-    weatherHere.style = ' '
-  } else {
-    loadingHere.style = 'display: none;'
-    errorHere.style = ' '
-    errorHere.textContent = 'Error ' + request.status
+    if (request.status == 200) {
+      setData(data)
+      loadingHereBigBlock.style = 'display: none;'
+      weatherHere.style = ' '
+    } else {
+      loadingHere.style = 'display: none;'
+      errorHere.style = ' '
+      errorHere.textContent = 'Error ' + request.status
+    }
   }
+
+  request.onloadstart = function () {
+    weatherHere.style = 'display: none;'
+    loadingHereBigBlock.style = ' '
+    errorHere.style = 'display: none;'
+    loadingHere.style = ' '
+  }
+
+  request.send()
 }
 
-request.onloadstart = function () {
-  weatherHere.style = 'display: none;'
-  loadingHereBigBlock.style = ' '
-  errorHere.style = 'display: none;'
-  loadingHere.style = ' '
-}
-
-request.send()
+defaultRequest()
